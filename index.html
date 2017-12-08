@@ -4,6 +4,7 @@
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>Lab: Pixel Art Maker</h1>
@@ -14,15 +15,80 @@
         <input type="number" id="input_height" name="height" min="1" value="1">
         Grid Width:
         <input type="number" id="input_width" name="width" min="1" value="1">
-        <input type="submit">
+        <input type="button" >
     </form>
 
     <h2>Pick A Color</h2>
     <input type="color" id="colorPicker">
 
     <h2>Design Canvas</h2>
-    <table id="pixel_canvas"></table>
+    <table id="pixel_canvas"><colgroup>
+<col style="width: 31px">
+<col style="width: 52px">
+<col style="width: 30px">
+<col style="width: 30px">
+</colgroup>
+  <tr>
+    <th class="tg-yw4l"></th>
+    <th class="tg-4luf"></th>
+    <th class="tg-yw4l"></th>
+    <th class="tg-yw4l"></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-45bf"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr></table>
+
 
     <script src="designs.js"></script>
 </body>
 </html>
+
+<!--
+    <table class="tg" style="undefined;table-layout: fixed; width: 143px">
+<colgroup>
+<col style="width: 31px">
+<col style="width: 52px">
+<col style="width: 30px">
+<col style="width: 30px">
+</colgroup>
+  <tr>
+    <th class="tg-yw4l"></th>
+    <th class="tg-4luf"></th>
+    <th class="tg-yw4l"></th>
+    <th class="tg-yw4l"></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-45bf"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+</table>
+-->
