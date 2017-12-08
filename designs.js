@@ -1,25 +1,21 @@
 // Select color input
+var colorPicker = $('#colorPicker');
+
 // Select size input
+var heightInput = $('#input_height');
+var widthInput = $('#input_width');
 
 // When size is submitted by the user, call makeGrid()
+$(':button').click(makeGrid);
+//$(':submit').click(makeGrid);
 
 function makeGrid() {
-    //clear table
-    $('colgroup').remove();
     $('tr').remove();
-    $('tbody').remove();
     
     var table = $('pixel_canvas');
     
-    var rows = $('#input_height').val();
-    var cols = $('#input_width').val();
-    
-    $('#pixel_canvas').append(`<colgroup></colgroup>`);
-    var colGroup = $('colgroup');
-    for(var i = 0; i < cols; i++){
-        colGroup.append(`<col style="width: 20px">`);
-        console.log('adding col');
-    }
+    var rows = heightInput.val();
+    var cols = widthInput.val();
     
     for(var y = 0; y < rows; y++){
         var htmlRowString = '<tr>';
@@ -28,22 +24,12 @@ function makeGrid() {
             htmlRowString += "<td></td>";
         }
         htmlRowString += '</tr>';
-        console.log('adding' + htmlRowString);
         $('table').append(htmlRowString);
     }
     
     $('td').on('click', function(){
-        var backgroundColor = $(this).css('background-color');
-        
-        if($(this).hasClass('colored-background')){
-            $(this).attr('style','');
-            $(this).toggleClass('colored-background');
-        }else{
-            $(this).toggleClass('colored-background');
-            var myColor = $('#colorPicker').val();
-            $(this).css('background', myColor);        
-        }
+        $(this).css('background',colorPicker.val());
     })
 }
 
-$(':button').on('click', makeGrid);
+
